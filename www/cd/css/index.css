@@ -1,0 +1,111 @@
+.shareyd{
+}
+* {
+	/* 初始化 清除元素的内外边距 */
+	padding: 0;
+	margin: 0;
+	/* 盒子模型 */
+	box-sizing: border-box;
+}
+li{
+list-style-type:none;
+}
+}
+.navbar {
+}
+.navbar input {
+	/* 隐藏元素 */
+	display: none;
+}
+.navbar label {
+	/* 绝对定位 */
+	position: absolute;
+	top: 1%;
+	left: 200px;
+	font-size: 20px;
+	color: #666666;
+	padding-left: 20px;
+	cursor: pointer;
+	/* 加过渡 */
+	transition: all 0.5s;
+}
+.navbar div {
+	position: fixed;
+	top: 1%;
+	left: 1%;
+	width: 200px;
+	/* 高度占浏览器可视区域的高度 */
+	height: 98%;
+	background-rgb: (255,255,255);
+         backdrop-filter: blur(10px);
+	transition: all 0.5s;
+z-index: 2;
+border-radius: 25px;
+  box-shadow: 1 1 0 2px rgba(255,255,255,0.2);
+}
+
+.navbar div div:first-child img {
+	width: 80px;
+	border-radius: 50%;
+position: fixed;
+top: 2%;
+left: 60px;
+}
+.navbar div div:first-child span {
+	color: #303030;
+	font-size: 14px;
+	/* 禁止文字换行 */
+	white-space: nowrap;
+text-align : center;
+position: fixed;
+left: 80px;
+top: 110px;
+}
+.navbar div li a {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	color: #2c2c2c;
+	/* 取消a标签的下划线 */
+	text-decoration: none;
+	/* 现在盒子内直接定义好左边框 不过颜色为透明色也就看不见 */
+	border-left: 2px solid transparent;
+}
+.navbar div li a i {
+	font-size: 18px;
+	margin: 0 15px;
+}
+.navbar div li a span {
+	font-size: 14px;
+}
+.navbar div li a:hover {
+	color: #191919;
+	/* 这样文字和图标会被带跑不太好看 解决办法很简单 */
+	/* 然后鼠标放上去变颜色就可以了 */
+	border-left-color: #9adcfa;
+}
+.navbar input:checked + label {
+	left: 0;
+}
+.navbar input:checked + label i {
+	/* 沿着y轴旋转180度 */
+	transform: rotateY(180deg);
+}
+.navbar input:checked ~ div {
+	left: -200px;
+}
+.navbar div li:hover {
+background-image: linear-gradient(150deg, #b721ff , #21d4fd 80%, transparent);
+  box-shadow: 0 0 0 5px rgba(255,255,255,0.5)
+}
+.navbar div li {
+  font-family: monospace;
+  background-rgba: (255,255,255,0.9)
+  color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  width: 180px;
+  height: 38px;
+  transition: 0.66654542628s;
+}

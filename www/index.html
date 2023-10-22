@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+  <head>        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>More Chat OL.T1</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.ico">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="cd/css/font-awesome.css" />
+		<link rel="stylesheet" href="cd/css/index.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  </head>
+  <body>
+<!--加载页面--!>
+<audio id="audio" src="js/preview.mp3" hidden></audio>
+<audio id="musicaudio" hidden></audio>
+<div id="page">
+<button id="closePage">
+<svg height="25" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+</button>
+  <input type="text" id="keywords" placeholder="输入关键词">
+  <button id="searchBtn">搜索</button>
+  <div id="result"></div>
+  <img id="musicImg">
+  <div id="lyric"></div>
+</div>
+<div class="audioPlayer">
+  <p><span id="currentTime"></span>|<span id="totalTime"></span><span id="songName"></span></p>
+  <input type="range" id="seekBar" min="0" max="100" step="1" value="0">
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+  <button id="playPauseBtn">播放</button>
+</div>
+<div class="pbc" id="data">
+<svg xmlns="http://www.w3.org/2000/svg" height="128px" width="128px" viewBox="0 0 128 128" class="pll">
+  <defs>
+    <linearGradient y2="1" x2="0" y1="0" x1="0" id="pll-grad">
+      <stop stop-color="hsl(193,90%,55%)" offset="0%"></stop>
+      <stop stop-color="hsl(223,90%,55%)" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <circle stroke-linecap="round" stroke-width="16" stroke="hsla(0,10%,10%,0.1)" fill="none" cy="64" cx="64" r="56" class="pll__ring"></circle>
+  <path stroke-dashoffset="10" stroke-dasharray="44 1111" stroke-linejoin="round" stroke-linecap="round" stroke-width="16" stroke="url(#pll-grad)" fill="none" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" class="pll__worm"></path>
+</svg>
+<button data-text="Awesome" class="button" onclick="buttonClick();">
+    <span class="actual-text">&nbsp;SKIP &nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp;SKIP &nbsp;</span>
+</button>
+</div>
+
+<div>
+    <div class="all">
+<div class="name">
+<div>
+    <div class="body">
+<div class="loginn">
+</div>
+        <div class="login">
+            <div class="box6">
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <div class="dzj1">
+<div class="typewriter">
+    <div class="slide"><i></i></div>
+    <div class="paper"></div>
+    <div class="keyboard"></div>
+</div>
+      </div>
+        </div>
+        <div class="flip-card-back">
+          <diuv class="dzj1">
+<div class="container">
+	<div class="loader"></div>
+	<div class="loader"></div>
+	<div class="loader"></div>
+</div>
+          </div>
+        </div>
+    </div>
+
+                <p class="table">Login</p>
+                <br>
+<div class="box9">
+                <input type="text" placeholder="输入昵称" id="name" autocomplete="off" style="width: 90%" autofocus="">
+                <input type="password" placeholder="密码随意" title="其实不输也行"style=" width: 90%">
+</div>
+                <a><input type="checkbox" name="ikun" checked="checked" style="text-decoration: none;color: #000000;font-family: 'Lato';"style>我已阅读并同意</a><a href="js/sm.txt">More Chant OL.T1协议</a>
+                <a class="go" type="button" id="nameBtn">GO</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>      
+<!--菜单--!>
+<div class="navbar">
+			<input type="checkbox" id="checkbox">
+			<label for="checkbox">
+				<i class="fa fa-outdent"></i>
+			</label>
+<div>
+				<div>
+					<img src="cd/images/bilibili.png" alt="">
+					<span>Moren</span>
+				</div>
+<div class=""cdd>
+				<li style="position: fixed;top: 160px;">
+					<a href="https://music.morechatol.eu.org">
+						<i class="fa fa-sitemap"></i>
+						<span>More_Music</span>
+					</a>
+				</li>
+				<li style="position: fixed;top: 210px;">
+					<a href="more@morechatol.eu.org">
+						<i class="fa fa-user"></i>
+						<span>Email</span>
+					</a>
+				</li>
+				<li style="position: fixed;top: 260px;">
+					<a href="https://www.morechatol.eu.org">
+						<i class="fa fa-windows"></i>
+						<span>New Bing</span>
+					</a>
+				</li>
+</div>
+			</div>
+		</div>
+      <div class="main">
+        <div class="header" style="font-family: 'Lato';">
+          <img src="image/logo.ico">
+M Chant OL
+        </div>
+<div>
+        <div id="container">
+          <div class="conversation">
+              <ul id="messages"></ul>
+</div>
+                <div class="box">
+                  <!-- autocomplete禁用自动完成功能 -->
+                  <textarea id="m" placeholder="唔 输入框在这里" autofocus></textarea>
+<div>
+                  <div class="edit"> 
+                    <i title="选择字体颜色" class="fa fa-font">
+                    <input type="color" id="color" value="#000000">
+                    </i>
+                    <i title="双击取消选择" class="fa fa-smile-o" id="smile"></i>
+                    <i title="单击页面震动" id="shake" class="fa fa-bolt">
+                    </i>
+                    <input type="file" id="file" accept="image/gif, image/jpeg">
+                    <i class="fa fa-picture-o" id="img"></i>
+
+                    <input type="file" id="allfile">
+                    <i class="fa fa-file-o" id="ifile"></i>
+
+                    <button id="changeMusic" title="播放在线音乐" value="现在隐藏">Music</button>
+                    <i class="fa fa-music" id="ifile"></i>
+                    <div class="selectBox"> 
+                      <div class="smile" id="smileDiv"> 
+                        <p>经典表情</p>
+                        <ul class="emoji"></ul>
+                      </div> 
+                    </div>
+                  </div>
+                  <button class="btn rBtn" id="sub">发送</button>
+                  <button class="btn" id="clear">清除</button>
+</div>
+                            </div>
+</div>
+          <div class="contacts">
+            <h1  title="因为懒" deta-title>在线人员(<span  d="num">0.114514</span>)</h1>
+            <ul id="users"></ul>
+            <p>当前无人在线哟~</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+<div class="xfll" style="font-family:'JXZKk';">
+<div align="center"><h6 id="dateTime">Time:Y-M-D H:min:S</h6><div class="yss"><h6 id="dateTime11">ms</h6></div></div>
+<h6 align="center" color="#808080">©2019-2023 More/W @2750893539</h6>
+<h6 align="center">基于node js,socket.io内核</h6>
+
+</div>
+
+<div class="toggleWrapper">
+    <input type="checkbox" class="dn" id="dn" type="button" value="隐藏DIV" onclick="doHide();">
+    <label for="dn" class="toggle">
+        <span class="toggle__handler">
+            <span class="crater crater--1"></span>
+            <span class="crater crater--2"></span>
+            <span class="crater crater--3"></span>
+        </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+    </label>
+</div>
+<div id="divTest">
+</div>
+
+  </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/chat-client.js"></script>
+</html>
