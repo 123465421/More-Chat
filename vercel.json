@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "headers": [{
     "source": "/(.*)",
     "headers" : [
@@ -16,7 +17,10 @@
       }
     ]
   }],
-  "routes": [
-    { "src": "/", "dest": "/www/index.html" }
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/www/"
+    }
   ]
 }
