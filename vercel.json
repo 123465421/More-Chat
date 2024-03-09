@@ -16,10 +16,7 @@
       }
     ]
   }],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/www/index.html"
-    }
+  "routes": [
+    { "src": "/", "dest": "/www/index.html" }
   ]
 }
